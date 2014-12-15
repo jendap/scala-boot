@@ -12,9 +12,9 @@ object ScalaBootBuild extends Build {
   lazy val buildSettings = Defaults.defaultSettings ++ Seq(
     organization := "com.janprach.scala-boot",
     version := "0.0.1-SNAPSHOT",
-    scalaVersion := "2.10.2",
+    scalaVersion := "2.11.4",
     libraryDependencies ++= Seq(
-      "org.scalatest" %% "scalatest" % "2.0.M6-SNAP21" % "test"
+      "org.scalatest" %% "scalatest" % "2.2.2" % "test"
     )
   )
 
