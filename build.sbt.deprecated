@@ -1,0 +1,20 @@
+// DO NOT USE build.sbt anymore! If you prefer sbt you should, imho,
+// use project directory where you can use regular scala files
+// for project definition.
+
+
+import AssemblyKeys._
+
+organization := "com.janprach.scala-boot"
+
+name := "scala-boot"
+
+version := "0.0.1-SNAPSHOT"
+
+scalaVersion := "2.11.6"
+
+libraryDependencies ++= Seq(
+  "org.scalatest" %% "scalatest" % "2.2.4" % "test"
+)
+
+assemblySettings
