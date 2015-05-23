@@ -35,7 +35,7 @@
 	</prerequisites>
 
 	<properties>
-		<main.class>com.janprach.scala.boot.ScalaBootApp</main.class>
+		<main.class>com.janprach.scalaboot.ScalaBootApp</main.class>
 
 		<jdk.version>1.7</jdk.version>
 		<character.encoding>UTF-8</character.encoding>

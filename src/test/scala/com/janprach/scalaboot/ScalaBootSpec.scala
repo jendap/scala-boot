@@ -1,4 +1,4 @@
-package com.janprach.scala.boot
+package com.janprach.scalaboot
 
 import org.scalatest.FlatSpec
 import org.scalatest.Matchers

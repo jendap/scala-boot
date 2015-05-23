@@ -1,4 +1,4 @@
-package com.janprach.scala.boot
+package com.janprach.scalaboot
 
 object ScalaBootApp {
   def main(args: Array[String]): Unit = {
