@@ -37,10 +37,10 @@
 	<properties>
 		<main.class>com.janprach.scalaboot.ScalaBootApp</main.class>
 
-		<jdk.version>1.7</jdk.version>
+		<jdk.version>1.8</jdk.version>
 		<character.encoding>UTF-8</character.encoding>
 
-		<scala.full.version>2.11.6</scala.full.version>
+		<scala.full.version>2.11.7</scala.full.version>
 		<scala.version>2.11</scala.version>
 	</properties>
 
@@ -98,7 +98,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
+				<version>3.3</version>
 				<configuration>
 					<compilerVersion>${jdk.version}</compilerVersion>
 					<source>${jdk.version}</source>
@@ -111,7 +111,7 @@
 			<plugin>
 				<groupId>net.alchim31.maven</groupId>
 				<artifactId>scala-maven-plugin</artifactId>
-				<version>3.2.0</version>
+				<version>3.2.2</version>
 				<configuration>
 					<charset>${character.encoding}</charset>
 					<scalaVersion>${scala.full.version}</scalaVersion>
@@ -159,7 +159,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-assembly-plugin</artifactId>
-				<version>2.5.3</version>
+				<version>2.5.5</version>
 				<configuration>
 					<descriptorRefs>
 						<descriptorRef>jar-with-dependencies</descriptorRef>
