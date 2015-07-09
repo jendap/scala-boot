@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-ECLIPSE_VERSION="luna"
-ECLIPSE_RELEASE="SR2"
+ECLIPSE_VERSION="mars"
+ECLIPSE_RELEASE="R"
 
 eclipse_home="${1:-$HOME/eclipse.$ECLIPSE_VERSION.$ECLIPSE_RELEASE.scala}"
 

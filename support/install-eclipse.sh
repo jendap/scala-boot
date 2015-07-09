@@ -8,8 +8,8 @@
 # have 64-bit os. It just assume you have.
 
 ECLIPSE_MIRROR="http://carroll.aset.psu.edu/pub/eclipse/technology/epp/downloads/release"
-ECLIPSE_VERSION="luna"
-ECLIPSE_RELEASE="SR2"
+ECLIPSE_VERSION="mars"
+ECLIPSE_RELEASE="R"
 
 eclipse_home="${1:-$HOME/eclipse.$ECLIPSE_VERSION.$ECLIPSE_RELEASE.scala}"
 
@@ -23,11 +23,11 @@ fi
 #which git >/dev/null || sudo apt-get install -y git
 #mvn -version 2>&1 | grep 'Apache Maven 3\.' >/dev/null || sudo apt-get install -y maven
 
-if ! javac -version 2>&1 | grep '1\.7\.' >/dev/null; then
+if ! javac -version 2>&1 | grep '1\.8\.' >/dev/null; then
   echo ">>>> installing jdk..."
-  which apt-get >/dev/null && ( dpkg -s openjdk-7-jdk >/dev/null 2>&1 || sudo apt-get install -y openjdk-7-jdk ) # openjdk-7-source
-  which yum >/dev/null && su -c "yum install java-1.7.0-openjdk"
-  uname -a | grep '^Darwin' >/dev/null && echo "WARNING: No java 7 compiler found on PATH. You should install one!"
+  which apt-get >/dev/null && ( dpkg -s openjdk-8-jdk >/dev/null 2>&1 || sudo apt-get install -y openjdk-8-jdk ) # openjdk-8-source
+  which yum >/dev/null && su -c "yum install java-1.8.0-openjdk"
+  uname -a | grep '^Darwin' >/dev/null && echo "WARNING: No java 8 compiler found on PATH. You should install one!"
 fi
 
 uname -a | grep '^Linux' >/dev/null && arch="linux-gtk-x86_64"
@@ -78,7 +78,7 @@ install_eclipse_plugin name.schedenig.eclipse.grepconsole.feature.group
 install_eclipse_plugin markdown.editor.feature.feature.group
 install_eclipse_plugin code.satyagraha.gfm.viewer.feature.feature.group
 
-install_eclipse_plugin net.sf.eclipsefp.haskell.feature.group
+#install_eclipse_plugin net.sf.eclipsefp.haskell.feature.group
 #install_eclipse_plugin org.eclipse.php.feature.group
 
 install_eclipse_plugin jd.ide.eclipse.feature.feature.group
@@ -98,6 +98,6 @@ curl http://search.maven.org/remotecontent?filepath=org/springframework/springlo
 cp -r diff/* "$eclipse_home"
 
 #echo "-javaagent:$eclipse_home/lombok.jar" >> "$eclipse_home/eclipse.ini"
-sed -i 's/-Xms40m/-Xms1280m/' "$eclipse_home/eclipse.ini"
-sed -i 's/-Xmx512m/-Xmx1280m/' "$eclipse_home/eclipse.ini"
+sed -i 's/-Xms256m/-Xms1280m/' "$eclipse_home/eclipse.ini"
+sed -i 's/-Xmx1024m/-Xmx1280m/' "$eclipse_home/eclipse.ini"
 #sed -i 's/-XX:MaxPermSize=256m/-XX:MaxPermSize=320m/' "$eclipse_home/eclipse.ini"
