@@ -20,6 +20,7 @@ Desktop.ini
 *.ear
 
 # eclipse
+.buildpath
 .classpath
 .factorypath
 .project
@@ -58,6 +59,8 @@ project/boot/
 project/plugins/project/
 
 # scala ide
+.cache-main
+.cache-tests
 .scala_dependencies
 
 # haskell
@@ -73,3 +76,7 @@ cabal-dev
 *.apk
 *.ap_
 *.dex
+
+# python
+*.pyc
+*.pyo
