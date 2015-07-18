@@ -95,7 +95,8 @@ install_eclipse_plugin org.jboss.tools.maven.apt.feature.feature.group
 curl http://projectlombok.org/downloads/lombok.jar -o "$eclipse_home/lombok.jar"
 curl http://search.maven.org/remotecontent?filepath=org/springframework/springloaded/1.2.3.RELEASE/springloaded-1.2.3.RELEASE.jar -o "$eclipse_home/springloaded-1.2.3.RELEASE.jar"
 
-cp -r diff/* "$eclipse_home"
+mkdir -p "$eclipse_home/workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings"
+cp workspace-settings/* "$eclipse_home/workspace/.metadata/.plugins/org.eclipse.core.runtime/.settings"
 
 #echo "-javaagent:$eclipse_home/lombok.jar" >> "$eclipse_home/eclipse.ini"
 sed -i 's/-Xms256m/-Xms1280m/' "$eclipse_home/eclipse.ini"
